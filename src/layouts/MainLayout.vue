@@ -1,4 +1,6 @@
 <template>
+  <RegisterPage />
+
   <q-layout view="lHh Lpr lFf">
     <q-header elevated>
       <q-toolbar>
@@ -10,6 +12,8 @@
           aria-label="Menu"
           @click="toggleLeftDrawer"
         />
+
+        <q-drawer> </q-drawer>
 
         <q-toolbar-title>Quasar CLI with Vite App</q-toolbar-title>
 
@@ -28,7 +32,6 @@
         />
       </q-list>
     </q-drawer>
-
     <q-page-container>
       <router-view />
     </q-page-container>
@@ -38,6 +41,7 @@
 <script>
 import { defineComponent, ref } from 'vue';
 import EssentialLink from 'components/EssentialLink.vue';
+import RegisterPage from 'components/RegisterPage.vue';
 
 const linksList = [
   {
@@ -89,6 +93,7 @@ export default defineComponent({
 
   components: {
     EssentialLink,
+    RegisterPage,
   },
 
   setup() {
